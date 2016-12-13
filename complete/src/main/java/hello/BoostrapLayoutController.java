@@ -26,4 +26,12 @@ public class BoostrapLayoutController {
 
     }
 
+    @RequestMapping(value ="/default-layout/", method = RequestMethod.GET)
+    public String defaultLayout(final Model model){
+
+        model.addAttribute("msg", "Hey, you are using the default layout");
+        return "layout/default-layout-main-page";
+
+    }
+
 }

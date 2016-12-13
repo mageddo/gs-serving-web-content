@@ -1,0 +1,11 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<title th:fragment="title" th:inline="text">
+    Main Page :: Default Page
+</title>
+<div class="container" th:fragment="content">
+    <p>
+        Message from server: <b> <span th:text="${msg}">User</span> </b>!
+    </p>
+</div>
+</html>
