@@ -1,4 +1,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <title th:fragment="title" th:inline="text">
+        [[${name}]] :: Boostrap Layout
+    </title>
     <div class="container" th:fragment="content">
         <p>
             Hello <span th:text="${name}">User</span>!
