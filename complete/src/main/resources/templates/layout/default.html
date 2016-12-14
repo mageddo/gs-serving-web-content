@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:fragment="page" >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.thymeleaf.org" >
     <head>
-        <title th:replace="this :: title"></title>
+        <title layout:title-pattern="$CONTENT_TITLE - $DECORATOR_TITLE">Default Layout</title>
         <meta name="author" content="Elvis de Freitas"/>
+        <script src="js/layout-script.js"></script>
     </head>
     <body>
         <h1>Default Layout</h1>
-        <div th:replace = "this :: content">
+        <div class="container" layout:fragment = "content">
             Content
         </div>
     </body>

@@ -1,9 +1,12 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:include="layout/default :: page" >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.thymeleaf.org"
+      layout:decorator="layout/default">
 
-<title th:fragment="title" th:inline="text">
-    Main Page :: Default Page
-</title>
-<div class="container" th:fragment="content">
+<head>
+    <title>Main Page</title>
+    <script src="js/specific.js"></script>
+</head>
+
+<div layout:fragment="content">
     <p>
         Message from server: <b> <span th:text="${msg}">User</span> </b>!
     </p>
