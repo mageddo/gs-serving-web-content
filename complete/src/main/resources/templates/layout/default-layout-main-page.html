@@ -4,11 +4,15 @@
 <head>
     <title>Main Page</title>
     <script src="js/specific.js"></script>
+    <script src="js/lazy-script.js"></script>
 </head>
+<body>
 
 <div layout:fragment="content">
     <p>
         Message from server: <b> <span th:text="${msg}">User</span> </b>!
     </p>
 </div>
+
+</body>
 </html>
